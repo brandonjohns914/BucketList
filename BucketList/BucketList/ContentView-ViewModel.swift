@@ -13,12 +13,11 @@ import MapKit
 extension ContentView {
    @MainActor class ViewModel: ObservableObject {
        @Published var mapRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 50, longitude: 0), span: MKCoordinateSpan(latitudeDelta: 25, longitudeDelta: 25))
-       
        @Published private(set)  var locations: [Location]
-       
        @Published  var selectedPlace: Location?
-        
        @Published var isUnlocked = false
+       @Published var authenticationError = "Unknown error"
+       @Published var isShowingAuthenticationError = false
        
        let savePath = FileManager.documentsDirectory.appendingPathComponent("SavedPlaces")
        
@@ -43,14 +42,11 @@ extension ContentView {
        
        func addLocation() {
            let newLocation = Location(id: UUID(), name: "New location", description: "", latitude: mapRegion.center.latitude, longitude: mapRegion.center.longitude)
-           
            locations.append(newLocation)
-           
            save()
        }
         
        func update(location: Location) {
-           
            guard let selectedPlace = selectedPlace else {return}
            
            if let index = locations.firstIndex(of: selectedPlace) {
@@ -67,17 +63,17 @@ extension ContentView {
                let reason = "Please authenticate yourself to unlock your places."
 
                context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, authenticationError in
-
-                   if success {
-                       Task { @MainActor in
-                            self.isUnlocked = true
+                   Task { @MainActor in
+                       if success {
+                           self.isUnlocked = true
+                       } else {
+                           self.authenticationError = "There was a problem authenticating. Please try again "
+                           self.isShowingAuthenticationError = true
                        }
-                   } else {
-                       // error
                    }
                }
            } else {
-               // no biometrics
+               authenticationError = "Sorry, your device does not support biometric authentication"
            }
        }
        

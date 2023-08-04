@@ -21,6 +21,7 @@
 		41CBAF8C2A7B14E900883F25 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CBAF8B2A7B14E900883F25 /* Result.swift */; };
 		41CBAF8E2A7B26C900883F25 /* ContentView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CBAF8D2A7B26C900883F25 /* ContentView-ViewModel.swift */; };
 		41DAE2C02A7D947400C571F3 /* FileManager-DocumentsDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DAE2BF2A7D947300C571F3 /* FileManager-DocumentsDirectory.swift */; };
+		41DAE2C22A7DB7A400C571F3 /* EditView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DAE2C12A7DB7A400C571F3 /* EditView-ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		41CBAF8B2A7B14E900883F25 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		41CBAF8D2A7B26C900883F25 /* ContentView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView-ViewModel.swift"; sourceTree = "<group>"; };
 		41DAE2BF2A7D947300C571F3 /* FileManager-DocumentsDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager-DocumentsDirectory.swift"; sourceTree = "<group>"; };
+		41DAE2C12A7DB7A400C571F3 /* EditView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditView-ViewModel.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				41CBAF8D2A7B26C900883F25 /* ContentView-ViewModel.swift */,
 				41DAE2BF2A7D947300C571F3 /* FileManager-DocumentsDirectory.swift */,
 				41CBAF892A7B044300883F25 /* EditView.swift */,
+				41DAE2C12A7DB7A400C571F3 /* EditView-ViewModel.swift */,
 				41CBAF8B2A7B14E900883F25 /* Result.swift */,
 				41CBAF872A7AF9EB00883F25 /* Location.swift */,
 				41CBAF7C2A79D2E000883F25 /* Tutorial */,
@@ -184,6 +187,7 @@
 				41DAE2C02A7D947400C571F3 /* FileManager-DocumentsDirectory.swift in Sources */,
 				41CBAF8C2A7B14E900883F25 /* Result.swift in Sources */,
 				41CBAF8E2A7B26C900883F25 /* ContentView-ViewModel.swift in Sources */,
+				41DAE2C22A7DB7A400C571F3 /* EditView-ViewModel.swift in Sources */,
 				41CBAF7E2A79D88500883F25 /* WritingDataDocumentsDirectory.swift in Sources */,
 				41CBAF842A7AF00C00883F25 /* Face&TouchIDwithSwiftUI.swift in Sources */,
 				41CBAF802A79DB7200883F25 /* SwitchingViewStatesEnums.swift in Sources */,
